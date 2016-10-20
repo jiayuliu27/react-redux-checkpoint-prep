@@ -58,7 +58,7 @@ describe('RegistryItem', () => {
                 name: 'Wine glasses',
                 price: 200
             };
-            const differentItemWrapper = shallow(<RegistryItem itemDetails={aDifferentItem}/>);
+            const differentItemWrapper = shallow(<RegistryItem itemDetails={aDifferentItem} />);
             expect(differentItemWrapper.find('h1')).to.have.html('<h1>Item name: <span>Wine glasses</span></h1>');
             expect(differentItemWrapper.find('h2')).to.have.html('<h2>Item price: <span>200</span></h2>');
         });

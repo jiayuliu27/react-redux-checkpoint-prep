@@ -22,14 +22,14 @@ export default class extends React.Component {
 
     render () {
         return (
-            <form>
+            <form onSubmit={ () => this.props.onSend(this.state)} >
                 <div className="form-group">
                     <label>Item name: </label>
-                    <input type="text" id="item-name-field" />
+                    <input type="text" id="item-name-field" onChange={ this.updateItemName }/>
                 </div>
                 <div className="form-group">
                     <label>Item price: </label>
-                    <input type="text" id="item-price-field" />
+                    <input type="text" id="item-price-field" onChange={ this.updateItemPrice } />
                 </div>
                 <button type="submit">Add item to registry</button>
             </form>
